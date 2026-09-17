@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evan Wilson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="studio">
+      <main class="board">
+        <header class="board__brand">
+          <h1 class="board__name">Evan Wilson's Mixer</h1>
+          <p class="board__tagline">
+            Pull a fader to bring a section into the mix.
+          </p>
+          <div class="board__mix is-live" id="mix">
+            <div class="board__mix-label"><span id="mix-label">Skills</span></div>
+            <div class="board__mix-grid" id="mix-grid"></div>
+          </div>
+        </header>
+
+        <section class="board__channels" id="channels" aria-label="Resume channels"></section>
+      </main>
+
+      <footer id="contact" class="talkback">
+        <h2 class="talkback__title">Talkback Mic</h2>
+        <p class="talkback__copy">Plymouth, MA.</p>
+        <div class="talkback__links">
+          <a class="talkback__btn" href="mailto:evanmitchellwilson@gmail.com"
+            >evanmitchellwilson@gmail.com</a
+          >
+          <a class="talkback__link" href="https://github.com/evanwilson2123">GitHub</a>
+          <a
+            class="talkback__link"
+            href="https://www.linkedin.com/in/evan-wilson-0525102b8/"
+            >LinkedIn</a
+          >
+        </div>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
