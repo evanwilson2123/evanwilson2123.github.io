@@ -1,0 +1,235 @@
+:root {
+  --bg: #1c1610;
+  --panel: #9a9e94;
+  --ink: #1a1c18;
+  --muted: rgba(26, 28, 24, 0.65);
+  --cream: #f2efe6;
+  --amber: #e8a017;
+  --slot: #1e201c;
+  --font-brand: 'Bebas Neue', sans-serif;
+  --font-body: 'Outfit', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.45;
+  color: var(--cream);
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(232, 160, 23, 0.12), transparent 45%),
+    radial-gradient(ellipse at 90% 20%, rgba(154, 158, 148, 0.15), transparent 40%),
+    var(--bg);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--amber);
+}
+
+:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+.studio {
+  min-height: 100svh;
+  padding: 1.25rem 0 2.5rem;
+}
+
+.project-nav {
+  max-width: 960px;
+  margin: 0 auto 1.5rem;
+  padding: 0 1.25rem;
+}
+
+.project-nav__brand {
+  font-family: var(--font-brand);
+  font-size: 1.5rem;
+  letter-spacing: 0.04em;
+}
+
+.project-nav__link {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(242, 239, 230, 0.75);
+}
+
+.project-main {
+  max-width: 960px;
+}
+
+.project-hero {
+  background: var(--panel);
+  color: var(--ink);
+  border-radius: 8px;
+  padding: 1.75rem 1.5rem;
+  margin-bottom: 1.75rem;
+  text-align: center;
+}
+
+.project-hero__kicker {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.project-hero__title {
+  margin: 0;
+  font-family: var(--font-brand);
+  font-size: clamp(2.6rem, 8vw, 4.2rem);
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.project-hero__lede {
+  margin: 0.6rem auto 0;
+  max-width: 36rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.project-section {
+  margin-bottom: 1.5rem;
+}
+
+.project-section__title {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-brand);
+  font-size: 2rem;
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+}
+
+.project-section__copy {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: rgba(242, 239, 230, 0.7);
+}
+
+.project-entry,
+.project-future {
+  height: 100%;
+  background: rgba(242, 239, 230, 0.06);
+  border: 1px solid rgba(242, 239, 230, 0.12);
+  border-radius: 8px;
+  padding: 1.15rem 1.1rem;
+}
+
+.project-entry__name,
+.project-future__name {
+  margin: 0 0 0.25rem;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.project-entry__meta {
+  margin: 0 0 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+
+.project-entry__body,
+.project-future__body {
+  margin: 0;
+  font-size: 0.92rem;
+  color: rgba(242, 239, 230, 0.82);
+}
+
+.project-future__body + .project-future__body {
+  margin-top: 0.75rem;
+}
+
+.project-section--future .project-future {
+  background: linear-gradient(
+    145deg,
+    rgba(232, 160, 23, 0.14),
+    rgba(242, 239, 230, 0.06) 55%
+  );
+  border-color: rgba(232, 160, 23, 0.35);
+}
+
+.project-foot {
+  max-width: 960px;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(242, 239, 230, 0.12);
+}
+
+.project-foot__link {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: rgba(242, 239, 230, 0.75);
+}
+
+@media (max-width: 991.98px) {
+  .project-section__title {
+    font-size: 1.75rem;
+  }
+
+  .project-hero {
+    padding: 1.4rem 1.15rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .studio {
+    padding-top: 0.75rem;
+  }
+
+  .project-nav {
+    margin-bottom: 1rem;
+  }
+
+  .project-hero__lede {
+    font-size: 0.88rem;
+  }
+
+  .project-section {
+    margin-bottom: 1.25rem;
+  }
+
+  .project-section__copy {
+    margin-bottom: 0.75rem;
+  }
+
+  .project-foot {
+    margin-top: 1.5rem;
+  }
+
+  .project-foot .col-12 + .col-12 {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .project-section__copy {
+    max-width: 16rem;
+  }
+
+  .project-entry,
+  .project-future {
+    padding: 1.35rem 1.25rem;
+  }
+}
